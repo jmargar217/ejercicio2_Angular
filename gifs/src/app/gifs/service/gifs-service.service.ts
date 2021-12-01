@@ -34,6 +34,8 @@ export class GifsServiceService {
       this._historial.splice(-1,1);
       this._historial.unshift(query);
       this.search(query);
+
+      localStorage.setItem("historial",JSON.stringify(this.historial));
     }
 
   }
