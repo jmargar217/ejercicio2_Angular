@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { GifsServiceService } from '../../service/gifs-service.service';
 
 @Component({
@@ -15,8 +15,10 @@ export class BusquedaComponent implements OnInit {
 
   addBusqueda(event:any):void{
     if(event.keyCode=="13"){
-        if(!this.servicio.historial.includes(event.target.value))
+        if(!this.servicio.historial.includes(event.target.value)){
           this.servicio.buscarGifs(event.target.value);
+          this.servicio.borrarArrayImgenes();
+        }
     }
   }
 }

@@ -11,4 +11,6 @@ export class GifsPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+
 }
